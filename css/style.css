@@ -1,0 +1,453 @@
+:root {
+    --lightRed: hsl(356, 100%, 66%);
+    --lighRed: hsl(356, 100%, 66%);
+    --veryDarkBlue: hsl(208, 49%, 24%);
+
+    --white: hsl(0, 0%, 100%);
+    --grayishBlue: hsl(240, 2%, 79%);
+    --veryDarkGrayishBlue: hsl(207, 13%, 34%);
+    --veryDarkBlackBlue: hsl(240, 10%, 16%);
+
+    --veryLightRed: hsl(13, 100%, 72%);
+    --lightRed: hsl(353, 100%, 62%);
+
+    --veryDarkGrayBlue: hsl(237, 17%, 21%);
+    --veryDarkDesaturatedGray: hsl(237, 23%, 32%);
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 3fr 1fr 3fr 1fr;
+    overflow-x: hidden;
+}
+
+.navegacao {
+    height: 600px;
+    background: url("../images/bg-pattern-intro.svg"), linear-gradient(var(--veryLightRed), var(--lightRed));
+    background-position: 34% 29%;
+    background-size: 1200px;
+    border-bottom-left-radius: 100px;
+}
+/* Flex start */
+.cabecalho,
+.headerSection,
+.btnMenu {
+    display: flex;
+}
+
+.headerSection,
+.btnMenu {
+    flex-direction: column;
+}
+
+.cabecalho,
+.btnMenu {
+    justify-content: space-between;
+}
+
+.headerSection,
+.btnMenu {
+    align-items: center;
+}
+
+/* Flex end */
+
+.cabecalho {
+    align-items: flex-end;
+    height: 25%;
+    width: 100vw;
+}
+
+.Home,
+.navHamburguer {
+    height: 50%;
+    padding: 0 20px;
+}
+
+.Home{
+    font-family: Overpass;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 2;
+    cursor: auto;
+}
+
+.menu img,
+.Home,
+.headerButtons .signIn,
+.headerButtons .LearnMore,
+.dropbtn > span,
+.SignUp,
+.navHamburguer img{
+    cursor: pointer;
+}
+
+.headerSection {
+    justify-content: center;
+    height: 50%;
+    text-align: center;
+}
+
+.Home,
+.headerSection {
+    color: var(--white);
+}
+
+.Home,
+.navHamburguer,
+.headerSection > h1 {
+    font-family: Overpass;
+    font-size: 2em;
+}
+
+.headerSection > h1 {
+    padding: 0 40px;
+    margin: 10px 0;
+}
+
+.headerSection > p {
+    font-family: Overpass;
+    margin: 0;
+    padding: 0 50px;
+}
+
+.headerButtons {
+    margin-top: 50px;
+}
+
+.headerButtons > button,
+.SignUp {
+    border-radius: 30px;
+    margin: 0 15px;
+    width: 130px;
+    height: 50px;
+    font-size: 1em;
+    font-family: Ubuntu;
+    padding: 0 6px;
+    font-weight: 700;
+}
+
+.headerButtons .signIn {
+    color: var(--lighRed);
+    border: none;
+    background-color: var(--white);
+}
+
+.headerButtons .LearnMore {
+    color: var(--white);
+    border: 1px solid #fff;
+    background: none;
+    outline: none;
+}
+
+.menuOn {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+
+    position: absolute;
+    height: auto;
+    top: 20%;
+    width: 80%;
+    margin-left: 43px;
+    background: var(--white);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.menuOff{
+    display: none;
+}
+
+.menuMedia {
+    display: flex;
+}
+
+.dropdown .dropbtn,
+.dropdown .dropdownContent a {
+    font-family: Overpass; 
+    font-weight: 600;
+    color: var(--veryDarkBlue)
+}
+
+.dropdown {  
+    padding-top: 15px;
+}
+
+.dropbtn {
+	height: 50px;
+	background: none;
+	border: none;
+    font-size: 1.2em;
+}
+
+.dropdownContent{
+	background-color: var(--grayishBlue);
+	padding: 25px 16px;
+    margin: 0 30px;
+    border-radius: 5px;
+	width: 80%;
+
+    display: none;
+}
+
+.dropdown .dropdownContent a{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+
+	text-decoration: none;
+	padding: 10px;
+    font-size: 1em;
+}
+
+.active {
+    display: block;
+}
+
+.imgDropdown {
+    transform: rotate(180deg);
+}
+
+.btnMenu {
+    height: 145px;
+    border-top: 1px solid var(--grayishBlue);
+    margin: 15px 30px;
+    padding: 15px 0;
+}
+
+.SignUp {
+    color: var(--white);
+    background: linear-gradient(var(--veryLightRed), var(--lightRed));
+    border: none;
+}
+
+/* inicio section1*/
+
+.apresentacao{
+    padding: 70px 45px;
+}
+
+.textApresentacao2 {
+    padding:  200px 45px 70px 45px;
+}
+
+
+.apresentacao,
+.apresentacao2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: Overpass;
+    font-weight: 300;
+}
+
+.apresentacao h1{
+    font-size: 1.6em;
+}
+
+.apresentacao2 h1 {
+    font-size: 2em;
+}
+
+.apresentacao h1 {
+    color: var(--veryDarkBlue);
+}
+
+.apresentacao2 h1,
+.apresentacao2 p{
+    color: var(--white);
+}
+
+
+.apresentacao p,
+.apresentacao2 p {
+    line-height: 1.8;
+    font-size: 1em;
+}
+
+.apresentacao p {
+    color: var(--veryDarkDesaturatedGray);
+}
+
+.apresentacao > img {
+    margin: 50px 0;
+}
+
+.apresentacao > [illustrationEditor2] {
+    margin: 30px 0;
+}
+
+/* fim section1*/
+
+.apresentacao2 {
+    background: url("../images/bg-pattern-circles.svg"), var(--veryDarkGrayBlue);
+    background-repeat: no-repeat;
+    background-position: 50% -230px;
+    background-size: cover;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.phones {
+    height: 180px;
+}
+
+.phones > img {
+    width: 100%;
+}
+
+footer {
+    background-color: var(--veryDarkBlackBlue);
+    border-top-right-radius: 100px;
+    text-align: center;
+    font-family: Ubuntu;
+}
+
+footer .rodape .Home{
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+footer .rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px 0;
+}
+
+footer h2 {
+    color: var(--white);
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 25px;
+  padding: 0;
+  line-height: 2;
+}
+
+footer ul li a {
+    color: hsl(240, 2%, 79%);
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Responsive */
+@media (min-width: 420px) {
+    .textApresentacao2 {
+        margin-top: 270px;
+    }
+
+    
+}
+
+@media (min-width: 714px) {
+    .navHamburguer {
+        display: none;
+    }
+
+    .cabecalho {
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 100px;
+    }
+
+
+    .menuDesktop {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 2;
+        align-items: center;
+        padding-left: 70px;
+    }
+    
+    .btnMenu {
+        flex-direction: row;
+    }
+    
+    .dropdown {
+        padding-top: 0;
+        margin-right: 40px;
+    }
+
+    .dropdown .dropbtn span {
+        color: var(--white);
+        font-size: 0.9em;
+        font-weight: 300;
+    }
+    
+    .btnMenu {
+        position: absolute;
+        right: 70px;
+    }
+
+    .btnMenu .dropbtn {
+        color: var(--white);
+    }
+    
+    .btnMenu .SignUp {
+        background: var(--white);
+        color: var(--lighRed);
+    }
+
+    .btnMenu .SignUp:hover {
+        background: var(--lightRed);
+        color: var(--white);
+    }
+
+    .navegacao {
+        font-family: Ubuntu;
+    }
+
+    .headerSection > h1{
+        font-size: 3em;
+    }
+    
+    .headerSection > p{
+        font-size: 1.3em;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdownContent {
+        position: absolute;
+        z-index: 1;
+        margin: 0;
+        width: auto;
+        background: var(--white);
+    }
+
+    
+    .dropdown .dropbtn, .dropdown .dropdownContent a {
+        color: var(--veryDarkBlackBlue);
+        font-family: Overpass;
+        font-weight: 300;
+    }
+    
+    .dropdownContent > a:hover {
+        font-weight: bold;
+        font-weight: 600;
+    }
+}
